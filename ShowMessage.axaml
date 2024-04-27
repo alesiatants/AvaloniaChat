@@ -1,0 +1,36 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="500" d:DesignHeight="500"
+        x:Class="Chat.ShowMessage"
+		SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Padding="10" Background="ForestGreen"
+       
+        Title="ShowMessage">
+	<StackPanel Spacing="5">
+		<TextBlock VerticalAlignment="Center">All messages</TextBlock>
+	<ListBox Name="messages" SelectedItem="{Binding SelItem}" Background="Transparent" Items="{Binding Items}"></ListBox>
+	<StackPanel Orientation="Horizontal"
+                    Spacing="5"
+                    Margin="0, 5, 5, 5">
+		<Button Width="100"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				HorizontalContentAlignment="Center"
+				Click="ButtonUpdate_OnClick"	
+                    >
+			Update
+		</Button>
+		<Button Width="100"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				HorizontalContentAlignment="Center"
+			Click="ButtonDelete_OnClick"
+                    >
+			Delete
+		</Button>
+	</StackPanel>
+		<TextBlock Name="err"></TextBlock>
+		</StackPanel>
+	
+</Window>

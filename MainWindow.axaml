@@ -1,0 +1,39 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d" d:DesignWidth="400" d:DesignHeight="400"
+        x:Class="Chat.MainWindow"
+		SizeToContent="WidthAndHeight" WindowStartupLocation="CenterScreen" Padding="10" Background="ForestGreen"
+        
+        Title="Chat">
+	<StackPanel Spacing="5">
+		<TextBlock>Name</TextBlock>
+		<TextBox Name="name"></TextBox>
+		<TextBlock>Email</TextBlock>
+		<TextBox Name="login"></TextBox>
+		<TextBlock >Password</TextBlock>
+		<TextBox Name="pass"></TextBox>
+		<StackPanel Orientation="Horizontal"
+                    Spacing="5"
+                    Margin="0, 5, 5, 5">
+			<Button Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+					Click="ButtonLogin_OnClick"
+                    >
+				Login
+			</Button>
+			<Button Width="100"
+                    HorizontalAlignment="Center"
+                    VerticalAlignment="Center"
+                    HorizontalContentAlignment="Center"
+					Click="ButtonRegister_OnClick"
+                    >
+				Register
+			</Button>
+		</StackPanel>
+		<TextBlock Name="messageerr"></TextBlock>
+	</StackPanel>
+</Window>
